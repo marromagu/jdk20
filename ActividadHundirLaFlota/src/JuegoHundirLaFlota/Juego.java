@@ -87,4 +87,18 @@ public class Juego {
 		}
 		return false;
 	}
+	public boolean disparo(int x, int y) {
+		if(tablero[x][y]=='B') {
+			tablero[x][y]='X';
+			return true;
+		}
+		return false;
+	}
+	public void hundido() {
+		for (int i = 0; i < tablero.length; i++) {
+			for (int j = 0; j < tablero.length; j++) {
+				tablero[i][j]=' ';
+			}
+		}
+	}
 }
